@@ -11,7 +11,7 @@ function addToDo(e) {
   toDoDiv.classList.add("todo");
 
   const newToDo = document.createElement("li");
-  newToDo.innerText = "adsadsadsad";
+  newToDo.innerText = todoInput.value;
   newToDo.classList.add("todo-item");
   toDoDiv.appendChild(newToDo);
 
@@ -22,8 +22,9 @@ function addToDo(e) {
 
   const dltdButton = document.createElement("button");
   dltdButton.innerHTML = '<i class = "fas fa-trash"></i>';
-  dltdButton.classList.add("complete-btn");
+  dltdButton.classList.add("delete-btn");
   toDoDiv.appendChild(dltdButton);
 
   todoList.appendChild(toDoDiv);
+  todoInput.value = "";
 }
